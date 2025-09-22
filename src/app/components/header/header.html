@@ -1,0 +1,9 @@
+<ul>
+    @for (item of links(); track $index) {
+        <li><a 
+            [routerLink]="item.path" 
+            routerLinkActive="active" 
+            [routerLinkActiveOptions]="{exact:item.path == '/'}">{{item.name}}</a></li>
+
+    }
+</ul>
